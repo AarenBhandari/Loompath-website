@@ -21,6 +21,15 @@ tailwind.config = {
 </script>
 
 <link href="styles.css" rel="stylesheet"/>
+
+<style>
+.nav-active {
+  color: #0369a1;
+  font-weight: 600;
+  border-bottom: 2px solid #0369a1;
+  padding-bottom: 2px;
+}
+</style>
 </head>
 
 <body class="bg-white text-gray-800">
@@ -67,10 +76,9 @@ tailwind.config = {
 
 <script>
 window.addEventListener('scroll', function(){
-  var h = document.querySelector('header');
+  const h = document.querySelector('header');
   if(!h) return;
-  if(window.scrollY > 20) h.classList.add('shadow-md');
-  else h.classList.remove('shadow-md');
+  window.scrollY > 20 ? h.classList.add('shadow-md') : h.classList.remove('shadow-md');
 });
 </script>
 
@@ -83,16 +91,16 @@ window.addEventListener('scroll', function(){
     <h3 class="text-xl font-semibold mt-2">Aaren Bhandari — Founder &amp; CEO</h3>
 
     <p class="mt-4 text-gray-600">
-      Aaren founded LoomPath to turn curiosity into opportunity. He leads the development of STEM workshops, online programs, and student-led collaboration systems that make engineering concepts accessible to young learners. His background in advanced science coursework and competitive STEM activities shaped the program’s focus on clarity, hands-on exploration, and real-world problem-solving.
+      Aaren founded LoomPath to turn curiosity into opportunity. He leads the development of STEM workshops, online programs, and student-led collaboration systems that make engineering concepts accessible to young learners.
     </p>
 
     <p class="mt-4 text-gray-600">
-      Aaren built LoomPath with the goal of lowering barriers for students who rarely get hands-on STEM exposure. He directs curriculum design, volunteer training, and global partnerships to ensure every program stays accurate, scalable, and enjoyable. LoomPath reflects his belief that early engineering experiences can build confidence and open long-term pathways in STEM.
+      Aaren built LoomPath with the goal of lowering barriers for students who rarely get hands-on STEM exposure. He directs curriculum design, volunteer training, and global partnerships to ensure every program stays accurate, scalable, and enjoyable.
     </p>
   </div>
 
   <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[Founder Portrait Placeholder — /assets/founder.jpg]</div>
+    <div class="text-gray-400">[Founder Portrait Placeholder]</div>
   </div>
 </section>
 
@@ -102,16 +110,21 @@ window.addEventListener('scroll', function(){
     <h2 class="text-3xl font-bold text-loomDeep">Our Story</h2>
 
     <p class="mt-4 text-gray-600">
-      LoomPath began with a simple idea: STEM learning should be hands-on, creative, and open to everyone. Early workshops revealed how many students had never built a circuit, tested a design, or experimented with simple engineering materials. Those sessions proved that making can be powerful and joyful when barriers are removed.
+      LoomPath began with a simple idea: STEM learning should be hands-on, creative, and open to everyone.
     </p>
 
     <p class="mt-4 text-gray-600">
-      What started as small in-person activities grew into a structured online initiative with clear curriculum, volunteer systems, and global reach. LoomPath now runs guided builds, concept lessons, and mini-projects that help students explore physics and engineering through simple materials and accessible explanations.
+      What started as small in-person activities grew into a structured online initiative with clear curriculum, volunteer systems, and global reach.
     </p>
   </div>
 
-  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[Our Story Image Placeholder — /assets/story.jpg]</div>
+  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 shadow">
+    <img
+      src="assets/img/story.jpeg"
+      alt="Students participating in LoomPath workshops"
+      loading="lazy"
+      class="w-full h-full object-cover"
+    >
   </div>
 </section>
 
@@ -121,16 +134,21 @@ window.addEventListener('scroll', function(){
     <h2 class="text-3xl font-bold text-loomDeep">Our Mission</h2>
 
     <p class="mt-4 text-gray-600">
-      Our mission is to make STEM education accessible, engaging, and empowering. We help students understand engineering concepts through hands-on projects that encourage creativity, problem-solving, and confidence in their abilities.
+      Our mission is to make STEM education accessible, engaging, and empowering.
     </p>
 
     <p class="mt-4 text-gray-600">
-      By using low-cost materials and guided instruction, LoomPath removes barriers that limit students from exploring STEM. We work to build a generation of young thinkers who see themselves as makers, designers, and problem-solvers capable of shaping their communities through curiosity and innovation.
+      By using low-cost materials and guided instruction, LoomPath removes barriers that limit students from exploring STEM.
     </p>
   </div>
 
-  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 flex items-center justify-center">
-    <div class="text-gray-400">[Our Mission Image Placeholder — /assets/mission.jpg]</div>
+  <div class="rounded-2xl overflow-hidden bg-gray-100 h-80 shadow">
+    <img
+      src="assets/img/mission.jpeg"
+      alt="Hands-on STEM learning in action"
+      loading="lazy"
+      class="w-full h-full object-cover"
+    >
   </div>
 </section>
 
